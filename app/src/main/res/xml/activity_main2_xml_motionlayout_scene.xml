@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/constSet_3Top" />
+    <ConstraintSet
+        android:id="@+id/constSet_4Top"
+        motion:deriveConstraintsFrom="@+id/constSet_3Top" >
+
+        <Constraint
+            android:id="@+id/consts_4"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp" />
+        <Constraint
+            android:id="@+id/consts_3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="@id/consts_4"
+            android:layout_marginTop="64dp"
+            motion:layout_constraintEnd_toStartOf="@id/consts_4"
+            android:layout_marginEnd="32dp" />
+        <Constraint
+            android:id="@+id/consts_1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="@id/const_5"
+            android:layout_marginTop="64dp"
+            motion:layout_constraintStart_toEndOf="@id/const_5"
+            android:layout_marginStart="32dp" />
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/constSet_5Top"
+        motion:deriveConstraintsFrom="@+id/constSet_4Top" >
+        <Constraint
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp"
+            android:id="@+id/const_5"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/consts_4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintTop_toTopOf="@id/const_5"
+            android:layout_marginTop="64dp"
+            motion:layout_constraintEnd_toStartOf="@id/const_5"
+            android:layout_marginEnd="32dp" />
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            motion:layout_constraintTop_toTopOf="@id/consts_1"
+            android:layout_width="200dp"
+            android:id="@+id/consts_2"
+            motion:layout_constraintStart_toEndOf="@id/consts_1"
+            android:layout_marginStart="32dp" />
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/constSet_1Top"
+        motion:deriveConstraintsFrom="@+id/constSet_5Top" >
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:id="@+id/consts_1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/const_5"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintTop_toTopOf="@id/consts_1"
+            android:layout_marginTop="64dp"
+            motion:layout_constraintEnd_toStartOf="@id/consts_1"
+            android:layout_marginEnd="32dp" />
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            motion:layout_constraintTop_toTopOf="@id/consts_2"
+            android:layout_width="200dp"
+            android:id="@+id/consts_3"
+            motion:layout_constraintStart_toEndOf="@id/consts_2"
+            android:layout_marginStart="32dp" />
+
+
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/constSet_2Top"
+        motion:deriveConstraintsFrom="@+id/constSet_1Top" >
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:id="@+id/consts_2"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:id="@+id/consts_1"
+            motion:layout_constraintTop_toTopOf="@id/consts_2"
+            motion:layout_constraintEnd_toStartOf="@id/consts_2"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp" />
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            motion:layout_constraintTop_toTopOf="@id/consts_3"
+            android:layout_width="200dp"
+            android:id="@+id/consts_4"
+            motion:layout_constraintStart_toEndOf="@id/consts_3"
+            android:layout_marginStart="32dp" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/constSet_3Top"
+        motion:constraintSetEnd="@+id/constSet_4Top"
+        android:id="@+id/tran_3_to_4"
+        motion:duration="1000"
+        motion:autoTransition="none"
+        motion:motionInterpolator="easeInOut">
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_1"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_1"
+                motion:framePosition="90"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_3"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_4"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+        </KeyFrameSet>
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="start" />
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/constSet_4Top"
+        motion:constraintSetEnd="@+id/constSet_5Top"
+        motion:duration="1000"
+        android:id="@+id/tran_4_to_5"
+        motion:motionInterpolator="easeInOut">
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_4"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/const_5"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_2"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_2"
+                motion:framePosition="90"
+                android:alpha="0" />
+
+        </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="start" />
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/constSet_5Top"
+        motion:constraintSetEnd="@+id/constSet_1Top"
+        motion:duration="1000"
+        motion:motionInterpolator="easeInOut"
+        android:id="@+id/tran_5_to_1" >
+
+        <OnSwipe motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="start" />
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_3"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_3"
+                motion:framePosition="90"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/const_5"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_1"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/constSet_1Top"
+        motion:constraintSetEnd="@+id/constSet_2Top"
+        android:id="@+id/tran_1_to_2"
+        motion:motionInterpolator="easeInOut"
+        motion:duration="1000" >
+        <OnSwipe motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="start" />
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_4"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_4"
+                motion:framePosition="90"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_1"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_2"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/constSet_2Top"
+        motion:constraintSetEnd="@+id/constSet_3Top"
+        android:id="@+id/tran_2_to_3"
+        motion:duration="1000"
+        motion:motionInterpolator="easeInOut" >
+        <OnSwipe motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="start" />
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/const_5"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/const_5"
+                motion:framePosition="90"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_2"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+            <KeyAttribute
+                motion:motionTarget="@+id/consts_3"
+                motion:framePosition="50"
+                android:translationY="-15dp" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_main_xml_constraintlayout_scene">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consts_3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/circular_shape_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consts_2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circular_shape_2"
+            app:layout_constraintEnd_toStartOf="@id/consts_3"
+            app:layout_constraintTop_toTopOf="@id/consts_3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consts_4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/circular_shape_3"
+            app:layout_constraintStart_toEndOf="@id/consts_3"
+            app:layout_constraintTop_toTopOf="@id/consts_3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consts_1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circular_shape_4"
+            app:layout_constraintEnd_toStartOf="@+id/consts_2"
+            app:layout_constraintTop_toTopOf="@id/consts_2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_5"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/circular_shape_5"
+            app:layout_constraintStart_toEndOf="@id/consts_4"
+            app:layout_constraintTop_toTopOf="@id/consts_4" />
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
